@@ -7,3 +7,4 @@ bin/
 aspnet-core/src/VoteCast.Web.Host/App_Data/Logs/
 aspnet-core/src/VoteCast.Web.Mvc/App_Data/Logs/
 aspnet-core/src/VoteCast.Migrator/Logs/Logs.txt
+
