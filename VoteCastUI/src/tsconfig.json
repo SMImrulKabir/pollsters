@@ -25,7 +25,11 @@
   },
   "files": [
     "main.ts",
-    "polyfills.ts"
+    "polyfills.ts",
+    "test.ts",
+    "app/home/home.component.spec.ts",
+    "app/app.component.spec.ts"
+
   ],
   "include": [
     "src/**/*.d.ts",
