@@ -1,11 +1,73 @@
 ﻿<div [@routerTransition]>
-  <section class="content-header">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <h1>{{ "HomePage" | localize }}</h1>
+  <div id="adminview" *ngIf="user=='admin'">
+    <p>Admin Home Page not Implemented</p>
+  </div>
+  <div id="voterview" *ngIf="user!='admin'">
+    <section id="FirstViewID" class="content-header" *ngIf="showBallot==false">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-4" style="padding: 500,500,500,500; ">
+            <div class="card">
+              <div class="card-body" style="height: 300px;">
+                <div class="d-flex justify-content-center"><button id="privacyBtn" type="button" class="btn btn-primary btn-lg" (click)="getRandomNumber()" [disabled]="privacy_code!=''">GENERATE PRIVACY CODE</button></div>
+                <div *ngIf="privacy_code!=''">
+                <div class="d-flex justify-content-center" style="height: 50px; margin-top: 20px;">Your Privacy Code:</div>
+                <div class="d-flex justify-content-center" style="height: 50px;"><h1 id="privacyCodeID">{{privacy_code}}</h1></div>
+                <div><p id="noteID">Please note down this code. You will need this code to verify your vote when result will publish</p></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-4"  style="padding: 500,500,500,500; height:20%; width:20%">
+            <div class="card">
+              <div class="card-body" style="height: 300px;">
+                <div class="d-flex justify-content-center"><button id="votingBtn" type="button" class="btn btn-primary btn-lg" [disabled]="privacy_code==''" (click)="showBallot=true"  style="margin-top: 90px;">START VOTING</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section id="SecondViewID" class="content-header" *ngIf="showBallot==true">
+      <div class="container-fluid">
+        <div class="row">
+        <div class="card col-3" style="margin-left: 10px;">
+          <h2 class="card-title">Best Presidant Ever Candidate</h2>
+          <img class="card-img-top" src="assets/img/logo.png" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Mr. Donald Trump</p>
+            <a href="#" class="btn btn-primary">SELECT</a>
+          </div>
+        </div>
+        <div class="card col-3" style="margin-left: 10px;">
+          <h2 class="card-title">Best Presidant Ever Candidate</h2>
+          <img class="card-img-top" src="assets/img/logo.png" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Mr. Barak obama</p>
+            <a href="#" class="btn btn-primary">SELECT</a>
+          </div>
+        </div>
+        <div class="card col-3" style="margin-left: 10px;">
+          <h2 class="card-title">Best Presidant Ever Candidate</h2>
+          <img class="card-img-top" src="assets/img/logo.png" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Mr. Bill Clinton</p>
+            <a href="#" class="btn btn-primary">SELECT</a>
+          </div>
+        </div>
+        <div class="card col-3" style="margin-left: 10px;">
+          <h2 class="card-title">Best Presidant Ever Candidate</h2>
+          <img class="card-img-top" src="assets/img/logo.png" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Mr. George W Bush</p>
+            <a href="#" class="btn btn-primary">SELECT</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+
 </div>
