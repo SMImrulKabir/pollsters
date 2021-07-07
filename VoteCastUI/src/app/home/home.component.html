@@ -30,44 +30,35 @@
         </div>
       </div>
     </section>
-    <section id="SecondViewID" class="content-header" *ngIf="showBallot==true">
+    <section id="SecondViewID" class="content-header" *ngIf="showBallot==true && voted==false">
       <div class="container-fluid">
+        <div class="jumbotron">
+          <h1 class="display-4">Select the best President ever!</h1>
+          <p class="lead">Your vote is confidential.</p>
+        </div>
         <div class="row">
-        <div class="card col-3" style="margin-left: 10px;">
-          <h2 class="card-title">Best Presidant Ever Candidate</h2>
-          <img class="card-img-top" src="assets/img/logo.png" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Mr. Donald Trump</p>
-            <a href="#" class="btn btn-primary">SELECT</a>
-          </div>
-        </div>
-        <div class="card col-3" style="margin-left: 10px;">
-          <h2 class="card-title">Best Presidant Ever Candidate</h2>
-          <img class="card-img-top" src="assets/img/logo.png" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Mr. Barak obama</p>
-            <a href="#" class="btn btn-primary">SELECT</a>
-          </div>
-        </div>
-        <div class="card col-3" style="margin-left: 10px;">
-          <h2 class="card-title">Best Presidant Ever Candidate</h2>
-          <img class="card-img-top" src="assets/img/logo.png" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Mr. Bill Clinton</p>
-            <a href="#" class="btn btn-primary">SELECT</a>
-          </div>
-        </div>
-        <div class="card col-3" style="margin-left: 10px;">
-          <h2 class="card-title">Best Presidant Ever Candidate</h2>
-          <img class="card-img-top" src="assets/img/logo.png" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Mr. George W Bush</p>
-            <a href="#" class="btn btn-primary">SELECT</a>
+        <div class="card col-3" style="margin-left: 10px;" *ngFor="let data of testData">
+          <div></div>
+          <div class="d-flex justify-content-center"><img class="img-circle" src="{{data.pic}}" alt="Picture not available" style="height: 200px; width: 200px; margin-top: 10px;"></div>
+          
+          <div class="card-body" style="text-align: center;">
+            <h1 class="card-text">{{data.name}}</h1>
+            <hr class="my-4">
+            <button type="button" class="btn btn-primary btn-lg" (click)=confirmVote(data.name)>Select</button>
           </div>
         </div>
       </div>
       </div>
     </section>
+    <section id="SecondViewID" class="content-header" *ngIf="showBallot==true && voted==true">
+      <img src="assets/img/confirmed.png" alt="Confirmed" style="height: 100px; width: 100px;">
+      <div class="jumbotron">
+      <h5>Your privacy code is: {{privacy_code}}</h5>
+      <hr class="my-4">
+      <h5>You have voted for</h5>
+      <h1>{{selectedCandidate}}</h1>
+    </div>
+    <p>Published result will show your privacy code and the name you voted for. Your name and identity will not be published</p>
+    </section>
   </div>
-
 </div>
