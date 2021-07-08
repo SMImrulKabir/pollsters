@@ -1045,3 +1045,366 @@ Product Owner comments:
    </td>
   </tr>
 </table>
+
+## Sprint 3
+
+
+## Sprint Planning
+
+We estimate that our development team has capacity to complete approximately 11 story points during this sprint. During sprint #2, we included 19 story points in our sprint backlog, but only completed 11 story points. Therefore, the new sprint #3 estimate is based on “yesterday’s weather” as we estimate that we will be able to complete the same number of story points in sprint #3 as sprint #2.  
+
+Upon determining our story point forecast, the development team met to pull user stories from the top of our product backlog into the sprint backlog. **Only development team members participated in this activity**. We added the following Product Backlog Items to Sprint Backlog for a total of 10 story points:
+
+
+
+* As a voter, I want to be able to see the ballot so that I can accurately record my vote (8 story points)
+* As a voter, I want confirmation that my vote has been processed after submitting my vote so that I can be confident that the vote was accurately recorded (2 story points)
+
+We decomposed the Spring Backlog into the developer tasks below. We came up with test cases specific to each task before beginning development:
+
+
+
+* Add a button for each candidate in the ballot that voters can click on to vote for that candidate
+* Add a confirmation message to the ballot page when the voter clicks on the vote button.
+* Add candidate information to the ballot including photo and name.
+
+The [Sprint #3 burndown chart](https://docs.google.com/document/d/1NBf7_El5QQKCO8tIe1cHTa9r0-chUNs4Qq9WRnOEcAQ/edit) shows our team's progress towards completing the sprint backlog. 
+
+
+## [Sprint Backlog](https://github.com/davidcrowe/pollsters/projects/4)
+
+
+## [Sprint Burndown Chart ](https://docs.google.com/document/d/1NBf7_El5QQKCO8tIe1cHTa9r0-chUNs4Qq9WRnOEcAQ/edit?usp=sharing)
+
+
+## [Evidence of July 6th’s Daily Scrum Event](https://docs.google.com/document/d/1Zl0IxfjHr-1jt1ELgbvl77MGuOaPUGkqGgXAyDZsG4c/edit?usp=sharing)
+
+
+## Daily Scrum Logs
+
+
+### July 7
+
+
+<table>
+  <tr>
+   <td>Team Member
+   </td>
+   <td>Last 24 Hours
+   </td>
+   <td>Next 24 Hours
+   </td>
+   <td>Impediments
+   </td>
+  </tr>
+  <tr>
+   <td>David
+   </td>
+   <td>
+<ul>
+
+<li>Completed sprint planning and wrote test cases for sprint backlog items
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>Prepare big visible information radiators for sprint review
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>None
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Imrul
+   </td>
+   <td>
+<ul>
+
+<li>Completed sprint planning and began working on developer tasks
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>Finish developer tasks for sprint #3
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>None
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Homoud
+   </td>
+   <td>
+<ul>
+
+<li>Completed sprint planning and broke user stories into developer tasks
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>Prepare document (README) ahead of sprint review
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>None
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" >Story Points Completed
+   </td>
+   <td colspan="2" >
+    8
+   </td>
+  </tr>
+</table>
+
+
+
+### July 8
+
+
+<table>
+  <tr>
+   <td>Team Member
+   </td>
+   <td>Last 24 Hours
+   </td>
+   <td>Next 24 Hours
+   </td>
+   <td>Impediments
+   </td>
+  </tr>
+  <tr>
+   <td>David
+   </td>
+   <td>
+<ul>
+
+<li>Build big visible information radiators for the sprint review
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>Sprint review & retrospective
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>None
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Imrul
+   </td>
+   <td>
+<ul>
+
+<li>Finished developer tasks for sprint #2
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>Sprint review & retrospective
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>None
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Homoud
+   </td>
+   <td>
+<ul>
+
+<li>Wrote the doc (README) ahead of the sprint review
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>Sprint review & retrospective
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>None
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" >Story Points Completed
+   </td>
+   <td colspan="2" >
+    2
+   </td>
+  </tr>
+</table>
+
+
+
+## Evidence of Pair or Mob Programming
+
+![mob](https://github.com/davidcrowe/pollsters/blob/main/Sprint%203%20-%20Mob%20programming.png)
+
+## Evidence of Unit Testing 
+
+Our product has two applications. One is the backend API (https://**votecastapi**.azurewebsites.net) written on C#.NET, another application is the frontend (https://**votecast**.azurewebsites.net/) written in JavaScript using Angular framework. Total 20 unit tests are for JavaScript code which can be run without the presence of API and Database. There are 4 unit tests for API, which can be run solely on API code without having connected it to the database and frontend.In this sprint** total 10 new** unit test cases have been created before code development started. Each unit test covers one of the business requirements. We use JASMIN (BDD) and KARMA to write and run the test. TDD and BDD practices have been followed.
+
+Below screenshot shows all JavaScript unit tests passed.
+
+![unit1](https://github.com/davidcrowe/pollsters/blob/main/Sprint%203%20-%20unit%20tests%201.png)
+
+Below screenshot shows 3 out of 4 C# API unit tests passed. One has been skipped.
+
+![unit2](https://github.com/davidcrowe/pollsters/blob/main/Sprint%203%20-%20unit%20tests%202.png)
+
+## Evidence of Continuous Integration & Continuous Delivery
+
+We built a fully working CI/CD pipeline using Github and Microsoft Azure DevOps. We have tested the pipeline via multiple code pushes to the main code branch and have confirmed that the pipeline works as intended. 
+
+![CICD](https://github.com/davidcrowe/pollsters/blob/main/Sprint%203%20-%20CICD.png)
+
+## Sprint Retrospective
+
+
+<table>
+  <tr>
+   <td>What went well
+   </td>
+   <td>What didn’t go well
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li>Implementation of CI/CD pipeline
+
+<li>Implementing new features
+
+<li>We delivered working software
+
+<li>Everyone was engaged to accomplish the goal
+
+<li>Team bonding via mob programming
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>Timezone challenge
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>What can we improve
+   </td>
+   <td>Actions
+   </td>
+  </tr>
+  <tr>
+   <td>
+<ul>
+
+<li>All developers should have  foundational knowledge of the technology framework
+
+<li>Further improve and tweak daily scrum meeting time to accommodate time zone challenge
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>Change the daily scrum meeting time from 6:30 PM EST to 2:30 PM EST
+</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
+
+
+<table>
+  <tr>
+   <td colspan="2" >Action Plan
+   </td>
+  </tr>
+  <tr>
+   <td>What will we change?
+   </td>
+   <td>Who will do it?
+   </td>
+  </tr>
+  <tr>
+   <td>The daily scrum meeting time from 6:30 PM EST to 2:30 PM EST
+   </td>
+   <td>
+<ul>
+
+<li>Imrul will join the scrum meeting from his office to enable the team to meet at that time. 
+
+<li>Homoud will reschedule the scrum meetings to the new time.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" >Acceptance Criteria
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" >
+<ul>
+
+<li>Scrum master reschedules daily scrums for 2.30pm EST
+
+<li>All scrum team members join scrum team meetings on time for all scrum meetings during the next sprint
+</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
